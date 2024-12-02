@@ -1,4 +1,4 @@
-ListaDeTarefas = [{"Nome": "Exemplo de Tarefa", "status": "pendente"}]
+ListaDeTarefas = [{"Nome": "Exemplo de Tarefa", "status": "pendente"}] #Para o Github
 
 def AdicionarTarefa():
     Tarefa = input("Qual a tarefa deseja adicionar? ")
