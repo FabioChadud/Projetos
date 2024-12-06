@@ -3,28 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Currículo</title>
+    <title>Currículo de Fabio Camara</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #2525dd;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #f3f5f8;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #686363;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .section-title {
+            background-color: #e2e2e2;
+            padding: 8px;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+
+        .contact-info, .education, .experience, .skills, .courses {
+            margin-bottom: 20px;
+        }
+
+        .skills ul {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .skills li {
+            margin-right: 15px;
+            background-color: #f1f1f1;
+            padding: 5px 10px;
+            border-radius: 20px;
+            margin-bottom: 10px;
+        }
+
+    </style>
 </head>
 <body>
 
-    <h1>CURRÍCULO</h1>
+    <header>
+        <h1>Currículo de Fabio Camara</h1>
+    </header>
 
-    <p>Nome: Fabio Camara</p>
-    <p>Idade: 40</p>
-    <ul> Contatos:
-        <il>e-mail: teste@gmail.com</il>
-        <il>WhatsApp: 21-85656-4564</il>
-    </ul>
-    
-    <ul>Escolaridade:
-        <il> Instituição: SENAC</il>
-        <il>Ano de Formação: 2002</il>
-        <il>Grau de Escolaridade: Técnico</il>
-    </ul>
+    <div class="container">
+        
+        <section class="contact-info">
+            <h2>Informações Pessoais</h2>
+            <ul>
+                <li><strong>Nome:</strong> Fabio Camara</li>
+                <li><strong>Idade:</strong> 40 anos</li>
+                <li><strong>E-mail:</strong> teste@gmail.com</li>
+                <li><strong>WhatsApp:</strong> 21-85656-4564</li>
+            </ul>
+        </section>
 
-    Soft Skills:  
+        <section class="education">
+            <h2>Formação Acadêmica</h2>
+            <ul>
+                <li><strong>Instituição:</strong> SENAC</li>
+                <li><strong>Ano de Conclusão:</strong> 2002</li>
+                <li><strong>Grau de Escolaridade:</strong> Técnico</li>
+            </ul>
+        </section>
 
+        <section class="experience">
+            <h2>Experiência Profissional</h2>
+            <div class="section-title">Cargo 1 - Nome da Empresa</div>
+            <ul>
+                <li><strong>Período:</strong> Janeiro 2010 - Dezembro 2015</li>
+                <li><strong>Atividades:</strong> Desenvolvimento de projetos, gestão de equipe e atendimento ao cliente.</li>
+            </ul>
 
+            <div class="section-title">Cargo 2 - Nome da Empresa</div>
+            <ul>
+                <li><strong>Período:</strong> Março 2016 - Atual</li>
+                <li><strong>Atividades:</strong> Gerenciamento de projetos, coordenação de atividades técnicas e supervisão de processos.</li>
+            </ul>
+        </section>
+
+        <section class="skills">
+            <h2>Habilidades</h2>
+            <ul>
+                <li>Comunicação</li>
+                <li>Trabalho em Equipe</li>
+                <li>Gestão de Projetos</li>
+                <li>Resolução de Problemas</li>
+                <li>Gerenciamento de Tempo</li>
+            </ul>
+        </section>
+
+        <section class="technical-skills">
+            <h2>Habilidades Técnicas</h2>
+            <ul>
+                <li>Programação: HTML, CSS, JavaScript</li>
+                <li>Ferramentas: Excel, PowerPoint, Word</li>
+                <li>Plataformas: Jira, Trello, Git</li>
+            </ul>
+        </section>
+
+        <section class="certifications">
+            <h2>Certificações</h2>
+            <ul>
+                <li><strong>Certificado de Gestão de Projetos</strong> - PMI (2018)</li>
+                <li><strong>Certificado de Desenvolvimento Web</strong> - Udemy (2020)</li>
+            </ul>
+        </section>
+
+        <section class="courses">
+            <h2>Cursos</h2>
+            <div class="section-title">Curso 1: Desenvolvimento Web</div>
+            <ul>
+                <li><strong>Instituição:</strong> Udemy</li>
+                <li><strong>Ano de Conclusão:</strong> 2021</li>
+                <li><strong>Descrição:</strong> Curso completo de desenvolvimento de websites, abordando HTML, CSS, JavaScript e React.</li>
+            </ul>
+
+            <div class="section-title">Curso 2: Gestão de Projetos Ágeis</div>
+            <ul>
+                <li><strong>Instituição:</strong> Coursera</li>
+                <li><strong>Ano de Conclusão:</strong> 2019</li>
+                <li><strong>Descrição:</strong> Curso focado em metodologias ágeis de gestão de projetos, como Scrum e Kanban.</li>
+            </ul>
+
+            <div class="section-title">Curso 3: Marketing Digital</div>
+            <ul>
+                <li><strong>Instituição:</strong> Alura</li>
+                <li><strong>Ano de Conclusão:</strong> 2020</li>
+                <li><strong>Descrição:</strong> Aprendizado sobre estratégias de marketing digital, SEO, Google Ads e Analytics.</li>
+            </ul>
+        </section>
+
+    </div>
 
 </body>
 </html>
