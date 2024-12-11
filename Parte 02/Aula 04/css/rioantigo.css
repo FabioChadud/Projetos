@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+body {
+    width: 940px;
+    background-color: rgb(224, 223, 224);
+}
+
+h1 {
+    color: #ffffff;
+    background-color: rgb(37, 36, 117);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+
+section h2 {
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(133, 100, 25);
+}
+
+section p {
+    font-family: 'Open Sans', sans-serif;
+    text-align: justify;
+}
+
+section article {
+    width: 100%;
+}
+
+section article p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rebeccapurple;
+}
+
+footer {
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: rgb(0, 128, 128);
+    list-style-type:circle;
+}
+
+footer ul li a {
+    text-decoration: none;
+}
+
+footer ul li:hover{
+    color: #0000;
+    font-size: 1.1em;
+}
+
+footer ul li a:hover{
+    color: black;
+    font-size: 1.2em;
+}
+
+footer ul li a:visited{
+    color: rgb(229, 255, 0);
+}
