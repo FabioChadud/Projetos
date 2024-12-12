@@ -1,0 +1,40 @@
+.hmenu {
+    background-color: blue;
+    font-family: 'Roboto', sans-serif;
+}
+
+.hmenu ul {
+    list-style: none;
+    padding: 0px;
+}
+
+.hmenu-container {
+    margin: 0 auto;
+    align-items: center;
+}
+.hmenu ul li{
+    display: inline;
+    justify-content: center;
+}
+
+.hmenu ul li a {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 20px;
+    display: inline-block;
+}
+
+.hmenu ul li a:hover{
+    background-color: #fff;
+    color: rgb(170, 170, 224);
+    text-decoration-line: underline;
+    text-decoration-color: blue;
+    text-decoration-style: wavy;
+}
+
+.hmenu ul li a:visited{
+    color: black;
+    font-family: fantasy;
+}
+
