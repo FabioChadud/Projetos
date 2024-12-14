@@ -1,0 +1,13 @@
+table {
+    width: 500px; font-family: Verdana, Geneva, Tahoma, sans-serif; border-collapse: collapse; border: solid; border-color: brown; 
+}
+
+tr {
+    height: 50px;
+}
+
+th {
+    background-color: blue;
+    color: white;
+    
+}
