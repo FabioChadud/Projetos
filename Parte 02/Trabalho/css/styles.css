@@ -1,0 +1,168 @@
+/* Importando fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&display=swap');
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Cabeçalho */
+.header {
+    background: linear-gradient(135deg, #003f63, #008891);
+    color: #fff;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.menu li a:hover,
+.menu li a.active {
+    color: #ffdd57;
+}
+
+.gallery-item {
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Conteúdo Principal */
+.main-content {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.section {
+    padding: 2rem 1rem;
+}
+
+.section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #005f73;
+    border-bottom: 2px solid #008891;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.section p {
+    margin-bottom: 1rem;
+}
+
+/* Galerias */
+.gallery,
+.video-gallery,
+.music-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.gallery figure,
+.video-gallery figure,
+.music-gallery figure {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    background-color: #fafafa;
+    transition: transform 0.3s;
+}
+
+.gallery figure:hover,
+.video-gallery figure:hover,
+.music-gallery figure:hover {
+    transform: scale(1.05);
+}
+
+.gallery img,
+.video-gallery video,
+.music-gallery audio {
+    max-width: 100%;
+    border-bottom: 1px solid #ddd;
+}
+
+figcaption {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    color: #555;
+}
+
+/* Rodapé */
+.footer {
+    background: #003f63;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+/* Links no Rodapé */
+.footer a {
+    color: #ffdd57;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
