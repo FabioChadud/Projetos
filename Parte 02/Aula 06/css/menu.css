@@ -1,0 +1,34 @@
+.hmenu {
+    background-color: rgb(170, 170, 224);
+    font-family: 'Roboto', sans-serif;
+}
+
+.hmenu ul {
+    list-style: none;
+    padding: 0px;
+}
+
+.hmenu ul li {
+    display: inline;
+}
+
+.hmenu ul li a {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 20px;
+    display: inline-block;
+}
+
+.hmenu ul li a:hover {
+    background-color: #fff;
+    color: rgb(170, 170, 224);
+    text-decoration-line: underline;
+    text-decoration-color: blue;
+    text-decoration-style: wavy;
+}
+
+.hmenu ul li a:visited {
+    color: black;
+    font-family: fantasy;
+}

@@ -1,0 +1,62 @@
+.tituloprincipal {
+    font-family: 'arima',cursive;
+    color: rgb(10, 85, 151);
+    margin: 20px 0;
+    padding: 20px 0 0 0;
+    text-align: center;
+    font-size: 36px;
+    border-bottom: 1px solid rgb(10, 85, 151);
+}
+
+.sobrerioantigo {
+    margin: 20px 0 30px 0;
+    padding: 10px 0;
+    box-sizing: content-box;
+}
+
+.sobrerioantigo h3 {
+    padding: 10px 0;
+    font-family: monospace;
+    font-size: 20px;
+    color: brown;
+}
+
+.sobrerioantigo p {
+    font-family: monospace;
+    font-size: 18px;
+    text-align: justify;
+}
+
+.rioantigocabecalho {
+    border: 1px solid blue;
+    border-radius: 2%;
+    width: 95%;
+    font-size: 28px;
+    font-family: 'arima', cursive;
+    padding: 10px;
+    padding-bottom: 10px;
+}
+
+.rioantigo {
+    border: 1px solid blue;
+    border-radius: 2%;
+    width: 95%;
+}
+
+.rioantigo:hover {
+    border: 5px solid blueviolet;
+}
+
+table {
+    border: 5px solid red;
+}
+
+.conteudo-rio-antigo-img {
+    align-content: center;
+    text-align: center;
+    margin: 8px 0;
+}
+
+.conteudo-rio-antigo-img img {
+    width: 220px;
+}
