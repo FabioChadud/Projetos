@@ -28,27 +28,34 @@
 }
 
 .rioantigocabecalho {
-    border: 1px solid blue;
+    /*border: 1px solid blue;*/
     border-radius: 2%;
     width: 95%;
     font-size: 28px;
     font-family: 'arima', cursive;
     padding: 10px;
     padding-bottom: 10px;
+    color: rgb(10, 85, 151);
 }
 
 .rioantigo {
-    border: 1px solid blue;
+    /*border: 1px solid blue;*/
     border-radius: 2%;
     width: 95%;
 }
 
-.rioantigo:hover {
-    border: 5px solid blueviolet;
+.rioantigo h3 {
+    text-align: center;
+    color: brown
 }
 
-table {
-    border: 5px solid red;
+.rioantigo p {
+    text-align: justify;
+    padding: 10px;
+}
+
+.rioantigo:hover {
+    border: 5px solid blueviolet;
 }
 
 .conteudo-rio-antigo-img {
