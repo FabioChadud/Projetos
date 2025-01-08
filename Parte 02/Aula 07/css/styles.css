@@ -13,8 +13,14 @@ body {
 #banner {
     background-color: rgb(127, 229, 255);
     width: 100%;
-    height: 40vh;
-    margin-top: 8vh;
+    height: auto;
+    margin: auto;
+    
+}
+
+#carouselExampleCaptions {
+    width: 100%;
+    margin: auto;
 }
 
 .colecao_cards {
