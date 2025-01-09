@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 article h2 {
     text-align: center;
     text-transform: uppercase;
@@ -64,4 +65,72 @@ main {
 h3 {
     text-align: center; 
     margin-top: 40px; 
+=======
+article h2 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+article h3 {
+    text-align: center;
+    text-transform: uppercase;
+}
+article img {
+    width: 78%;
+    max-width: 550px; 
+    height: 350px; 
+    object-fit: cover;
+    margin-top: 100px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto; 
+    display: block; 
+    border-radius: 10px; 
+    transform: scale(1.2);
+    height: auto;
+}
+
+figcaption {
+    text-align: center; 
+    font-style: italic;
+    margin-top: 0px;
+    margin-bottom: 40px; 
+}
+.rotacao {
+    width: 78%;
+    max-width: 550px; 
+    max-height: 350px; 
+    object-fit: cover;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto; 
+    display: block; 
+    border-radius: 10px; 
+    transform: scale(1.2);
+    border: 2px solid whitesmoke;
+    height: auto;
+}
+
+body {
+    box-sizing: border-box;
+    margin: auto;
+}
+
+main {
+    display: block;
+    border-left: 1px solid white;  
+    border-right: 1px solid white; 
+    border-top: none;              
+    border-bottom: none;           
+    margin: 1% 15%;
+    padding: 15px;
+    background-color: #0a0a0a;
+    box-sizing: border-box;
+}
+
+h3 {
+    text-align: center; 
+    margin-top: 40px; 
+>>>>>>> aea9c3fdd7f9ce59985454796bd4f907352d37a1
 }

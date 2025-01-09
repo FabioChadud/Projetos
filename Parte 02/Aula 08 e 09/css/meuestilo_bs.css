@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+.minha-fonte {
+    font-family: 'Poppins', sans-serif;
+}
+
+.minha-fonte-normal {
+    font-style: normal;
+}
+
+.my-label-color-purple {
+    color: #470864;
+}
+
+.tooltip-sublinhado {
+    text-decoration: underline; 
+}
+
+.my-badge-vertical-align-super {
+    vertical-align: super;
+}
+
+.meu-menu-btn {
+    color: #024b4b;
+    background-color: rgb(213, 216, 179);
+    border-color: rgb(213, 216, 179);
+}
+
+.meu-menu-btn:hover {
+    color: rgb(224, 134, 30);
+    border-bottom: 1px solid rgb(224, 134, 30);
+}
+
+.my-h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #470864;
+    border-bottom: 1px solid #470864;
+}
+
+.my-table-font {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.my-table-th th {
+    font-size: 24px;
+    color: #008080;
+    background-color: rgb(249, 255, 206);
+}
+
+.my-table-td-first-child td:first-child {
+    text-align: left;
+}
+
+.my-table-td-vertical-align td {
+    vertical-align: middle;
+}
+
+.my-table-border-bottom tr {
+    border-bottom: 1px solid rgb(214, 193, 226);
+}
+
+.my-table-hover tbody > tr:hover {
+    background-color: #a1cc9c4f;
+}
+
+.material-symbols-outlined.stateblue {
+    color: #6A5ACD;
+    vertical-align: bottom;
+}
+
+.meu-h5-font-size {
+    font-size: 1.2em;
+}
+
+.minha-cor-h5-carousel-caption {
+    color: white;
+    font-weight: bold;
+}
