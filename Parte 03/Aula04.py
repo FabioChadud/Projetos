@@ -40,7 +40,6 @@ for indice in range(qtdCandidatos):
     # aprovado
     if listaMedias[indice] > 4 and (listaPort[indice] >= 2 and listaMat[indice] >= 2 and listaCG[indice] >= 2):
         listaAprovados.append(indice)
-    
     # candidatos com media > 4.5 e nota de cg > 6
     if listaMedias[indice] > 4.5 and listaCG[indice] > 6:
         qtdCandidatosMediaMaior45 = qtdCandidatosMediaMaior45 + 1
@@ -50,7 +49,7 @@ somaNotas = 0
 for nota in listaPort:
     somaNotas = somaNotas + nota 
 
-media = somaNotas + len(listaPort)
+media = somaNotas / len(listaPort)
 
 # qtd candidatos aprovados com nota de matematica > 5
 qtdCandidatosAprovadosMatematicaMaior5 = 0
@@ -59,7 +58,7 @@ for indice_candidato_aprovado in listaAprovados:
         qtdCandidatosAprovadosMatematicaMaior5 = qtdCandidatosAprovadosMatematicaMaior5 + 1
     
         
-print(listaNomes, ' = ', listaPort, ' / ', listaMat, ' / ', listaCG)        
+print(listaNomes, ' Port = ', listaPort, ' Mat = ', listaMat, ' CG = ', listaCG)        
 print(listaMedias)
 print(listaAprovados)
 print("A média da prova de Português foi {0:.2f}".format(media))        
