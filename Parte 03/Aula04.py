@@ -4,95 +4,79 @@ nmatematica = 0
 nconhecgerais = 0
 continua = True
 
-dicCandidatos = {} # {'nomeCanditado':[NP, NM, NCG]}
-dicMedias = {} # {'nomeCadidato': media}
+dicCandidatos = {}  # {'nomeCandidato':[NP, NM, NCG]}
+dicMedias = {}  # {'nomeCandidato': media}
 listaAprovados = []
 listaNotas = []
 listaMedias = []
 
-# entrada de dados 
+# Entrada de dados
 while continua:
     nome = input('Informe o nome do candidato: ')
-    nportugues = float(input(f'Informe a nota de Português do candido {nome}: '))
-    nmatematica = float(input(f'Informe a nota de Matemática do candido {nome}: '))
-    nconhecgerais = float(input(f'Informe a nota de Conhecimentos Gerais do candido {nome}: '))
+    nportugues = float(input(f'Informe a nota de Português do candidato {nome}: '))
+    nmatematica = float(input(f'Informe a nota de Matemática do candidato {nome}: '))
+    nconhecgerais = float(input(f'Informe a nota de Conhecimentos Gerais do candidato {nome}: '))
     
-    listaNotas.append(nportugues)
-    listaNotas.append(nmatematica)
-    listaNotas.append(nconhecgerais)
-
+    listaNotas = [nportugues, nmatematica, nconhecgerais]  # Lista de notas reiniciada
     dicCandidatos[nome] = listaNotas
-   
+    
     pergunta_respondida = 'OK'
     while pergunta_respondida == 'OK':
-      
         resposta = input("\nDeseja cadastrar novo candidato (S)IM ou (N)ÃO): ")
         if resposta.upper() == 'S' or resposta.upper() == 'N':
             if resposta.upper() == 'N':
                 continua = False
-            pergunta_respondida = 'NOK' # break
+            pergunta_respondida = 'NOK'  # Finaliza a repetição do while
         
         else:
             print("\nInforme na pergunta 'S' para 'SIM' ou 'N' para 'NÃO'.")
-        
-    listaNotas = []
     
-# processamento
-# calcular medias
-# chave : valor
-# 'maria' : [10, 5.5, 9]
-chaves = dicCandidatos.keys()
-for chave in chaves:
-    notas_aluno = dicCandidatos.get(chave)
+# Processamento
+
+# Calcular médias
+for chave in dicCandidatos.keys():
+    notas_aluno = dicCandidatos[chave]
     media = sum(notas_aluno) / len(notas_aluno)
     dicMedias[chave] = media
 
 print(dicMedias)
 
-# recuperar aprovados e candidatos com media > 4.5 e nota de cg > 6
+# Recuperar aprovados e candidatos com média > 4.5 e nota de CG > 6
 qtdCandidatosMediaMaior45 = 0
-for chave in chaves:
-    # aprovado
-    # pega as notas do candidato
-    aprovado = False
-    notas_aluno = dicCandidatos.get(chave)
+for chave in dicCandidatos.keys():
+    notas_aluno = dicCandidatos[chave]
+    aprovado = True  # Inicializa como aprovado
 
-    # verifica se tem alguma das notas menor que 2
-    if notas_aluno[0] >= 2 and notas_aluno[1] >= 2 and notas_aluno[2] >= 2:
-        aprovado = True
+    # Verifica se tem alguma das notas menor que 2
+    if notas_aluno[0] < 2 or notas_aluno[1] < 2 or notas_aluno[2] < 2:
+        aprovado = False
     
-    # verifica se ele foi aprovado
-    if dicMedias.get(chave) > 4 and aprovado == True:
+    # Verifica se ele foi aprovado
+    if dicMedias[chave] > 4 and aprovado:
         listaAprovados.append(chave)
 
-    # candidatos com media > 4.5 e nota de cg > 6
-    if dicMedias.get(chave) > 4.5 and notas_aluno[2] > 6:
-        qtdCandidatosMediaMaior45 = qtdCandidatosMediaMaior45 + 1
-        
-# media prova portugues
-somaNotas = 0
-for chave in chaves:
-    notas_aluno = dicCandidatos.get(chave)
-    somaNotas = somaNotas + notas_aluno[0] 
+    # Candidatos com média > 4.5 e nota de CG > 6
+    if dicMedias[chave] > 4.5 and notas_aluno[2] > 6:
+        qtdCandidatosMediaMaior45 += 1
 
-media = somaNotas / len(chaves)
+# Média da prova de português
+somaNotas = sum([dicCandidatos[chave][0] for chave in dicCandidatos.keys()])
+media = somaNotas / len(dicCandidatos)
 
-# qtd candidatos aprovados com nota de matematica > 5
+# Quantidade de candidatos aprovados com nota de Matemática > 5
 qtdCandidatosAprovadosMatematicaMaior5 = 0
-for chave in chaves:
-    notas_aluno = dicCandidatos.get(chave)
-    if notas_aluno[1] > 5:
-        qtdCandidatosAprovadosMatematicaMaior5 = qtdCandidatosAprovadosMatematicaMaior5 + 1
+for chave in dicCandidatos.keys():
+    notas_aluno = dicCandidatos[chave]
+    if dicMedias[chave] > 4 and notas_aluno[1] > 5:
+        qtdCandidatosAprovadosMatematicaMaior5 += 1
 
-print()
-for chave in chaves:        
-    notas_aluno = dicCandidatos.get(chave)
-    print(chave, ' => Português: ', notas_aluno[0], ' / Matemática: ', notas_aluno[1], ' / Conhec Gerais: ', notas_aluno[2])        
-    print() 
-    
-print(f"Medias dos Candidatos: "dicMedias)
-print(listaAprovados)
-print("A média da prova de Português foi {0:.2f}".format(media))        
-print(f"Qtd Candidatos com média > 4.5 e nota Conhec Gerais > 6:  {qtdCandidatosMediaMaior45}")    
+# Exibindo resultados
+for chave in dicCandidatos.keys():
+    notas_aluno = dicCandidatos[chave]
+    print(f"{chave} => Português: {notas_aluno[0]} / Matemática: {notas_aluno[1]} / Conhec. Gerais: {notas_aluno[2]}")
+
+print(f"\nMédias dos Candidatos: {dicMedias}")
+print(f"\nCandidatos Aprovados: {listaAprovados}")
+print(f"A média da prova de Português foi {media:.2f}")        
+print(f"Qtd Candidatos com média > 4.5 e nota Conhec. Gerais > 6: {qtdCandidatosMediaMaior45}")    
 print(f"Qtd Candidatos aprovados com nota de Matemática > 5: {qtdCandidatosAprovadosMatematicaMaior5}")
-    
